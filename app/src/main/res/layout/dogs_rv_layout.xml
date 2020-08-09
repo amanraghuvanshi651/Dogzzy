@@ -45,7 +45,7 @@
                 android:layout_marginBottom="149dp"
                 android:fontFamily="@font/montserrat"
                 android:gravity="center"
-                android:text="Text"
+                android:text="Loading...."
                 android:textColor="#fff"
                 android:textSize="14dp" />
 
