@@ -19,13 +19,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="111dp"
+        android:layout_width="115dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
         android:fontFamily="@font/montserrat"
         android:gravity="center_horizontal|top"
         android:lineHeight="29dp"
-        android:text="Dogssy"
+        android:text="Dogzzy"
         android:textAllCaps="true"
         android:textAppearance="@style/dogssy"
         android:textColor="#fff"
@@ -38,7 +38,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="45dp"
+        android:layout_marginBottom="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">

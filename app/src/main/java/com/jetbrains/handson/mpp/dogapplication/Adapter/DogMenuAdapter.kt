@@ -76,10 +76,10 @@ class DogMenuAdapter(val context: Context?, private var receivedNameList: ArrayL
                         Log.i("load", "Size of the received List: $size")
                         Log.i("load", "position: $position")
 
-                        if (receivedNameList.isNotEmpty()) {
+                        if (receivedNameList.isNotEmpty() && position <= size) {
 //                            Log.i("load", "name at the position: ${receivedNameList[position]}")
                             if (size == 0) {
-                                val newPosition = 0
+                                val newPosition = size
                                 Log.i("load", "onResponse: newPosition assigned")
                                 val inlistdog = receivedNameList[newPosition]
                                 val dogName = inlistdog.capitalize()
