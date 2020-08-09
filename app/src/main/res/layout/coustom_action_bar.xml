@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="#222222"
+    android:layout_marginTop="30dp">
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center_horizontal|top"
+        android:text="Dogssy"
+        android:textColor="#fff"
+        android:textSize="36dp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head"
+        android:layout_marginTop="21dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Enjoy finding your\ndog mate :)"
+        android:textColor="#fff"
+        android:textSize="18dp" />
+
+    <ImageView
+        android:id="@+id/nav_bar_search"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="33dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/search_navbar"/>
+
+</RelativeLayout>

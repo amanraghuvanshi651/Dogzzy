@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#222222">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll"
+            app:contentScrim="?attr/colorPrimary"
+            app:title="Dogssy"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp">
+
+            <RelativeLayout
+                android:id="@+id/top_bar_search_dog_activity"
+                android:layout_width="match_parent"
+                android:layout_marginTop="59dp"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:id="@+id/dogName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24dp"
+                    android:text="Name"
+                    android:textColor="#fff"
+                    android:fontFamily="@font/montserrat"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="31dp"/>
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="33dp"
+                    android:src="@drawable/info_logo" />
+
+
+            </RelativeLayout>
+
+
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/recyclerView"
+                android:overScrollMode="never"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:theme="@style/MainActivityTheme"-->
+<!--    android:background="#222222"-->
+<!--    android:orientation="vertical"-->
+<!--    tools:context=".Activity.MainActivity">-->
+<!--    -->
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/top_bar_search_dog_activity"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_marginTop="59dp"-->
+<!--        android:layout_height="50dp">-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textSize="24dp"-->
+<!--            android:text="Name"-->
+<!--            android:textColor="#fff"-->
+<!--            android:fontFamily="@font/montserrat"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="31dp"/>-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="23dp"-->
+<!--            android:layout_height="23dp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginEnd="33dp"-->
+<!--            android:src="@drawable/info_logo" />-->
+
+
+<!--    </RelativeLayout>-->
+
+<!--&lt;!&ndash;    <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/top_bar"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_marginTop="10dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:orientation="horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:padding="5dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:weightSum="100">&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <RelativeLayout&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="50dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_weight="98">&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <AutoCompleteTextView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/search_text"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_alignParentStart="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_alignParentTop="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginStart="10dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:background="@drawable/search_background"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:hint="Search"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:paddingLeft="20dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:textColor="#fff" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <ProgressBar&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/progressBar"&ndash;&gt;-->
+<!--&lt;!&ndash;                style="?android:attr/progressBarStyle"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="20dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="20dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_alignParentEnd="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_centerVertical="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_marginEnd="20dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_weight="1"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:theme="@style/ProgressBarTheme" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;        </RelativeLayout>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;        <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/search_btn"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="50dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="50dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_centerVertical="true"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginStart="15dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_toEndOf="@+id/search_text"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:background="@drawable/search_background"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:padding="8dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:src="@drawable/search"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:tint="#fff" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;    </LinearLayout>&ndash;&gt;-->
+
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/recyclerView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:overScrollMode="never"-->
+<!--            android:paddingLeft="20dp"-->
+<!--            android:layout_below="@+id/top_bar_search_dog_activity"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginStart="0dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginEnd="0dp"-->
+<!--            android:layout_marginBottom="0dp"/>-->
+
+<!--</RelativeLayout>-->

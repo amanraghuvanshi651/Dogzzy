@@ -1,0 +1,59 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
+    <style name="MainActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:textColorHint">@color/your_color_floating_hint</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
+    <style name="ProgressBarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/progress_bar_color</item>
+    </style>
+
+
+    <!-- Name's Style -->
+
+    <style name="Name">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.04
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+    </style>
+
+    <style name="dogssy">
+
+        <item name="android:textSize">
+            24sp
+        </item>
+
+        <item name="android:letterSpacing">
+            0.04
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+    </style>
+
+</resources>

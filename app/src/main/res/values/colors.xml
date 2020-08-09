@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#222222</color>
+    <color name="colorPrimaryDark">#222222</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="progress_bar_color">#fff</color>
+    <color name="white">#fff</color>
+    <color name="your_color_floating_hint">#888888</color>
+</resources>
