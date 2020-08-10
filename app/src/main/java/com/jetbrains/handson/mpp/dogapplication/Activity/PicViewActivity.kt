@@ -26,6 +26,7 @@ import java.io.FileOutputStream
 import java.io.OutputStream
 import java.text.SimpleDateFormat
 import java.util.*
+import android.os.Handler
 
 
 class PicViewActivity : AppCompatActivity() {
@@ -42,9 +43,19 @@ class PicViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pic_view)
 
+        val visible = View.VISIBLE
+        val invisible = View.INVISIBLE
+
         full_screen_img = findViewById(R.id.dogImage_full_screen)
         downloadBtn = findViewById(R.id.download_btn)
         zoomlayout = findViewById(R.id.zoomLayout)
+
+
+        Handler().postDelayed({
+
+            downloadBtn.visibility = visible
+
+        },500 )
 
         val intent: Intent = intent
         var rec_message = intent.getStringExtra("image_link")

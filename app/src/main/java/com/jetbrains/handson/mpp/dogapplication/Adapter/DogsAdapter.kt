@@ -49,19 +49,15 @@ class DogsAdapter (val context:Context, private val dogsImages: ArrayList<DogsAp
             if (v != null) {
                 val message = dogsImages[position].message
                 val image = v.findViewById<ImageView>(R.id.dogImage_searched_layout)
-                val downloadBtn = v.findViewById<RelativeLayout>(R.id.download_btn_search_dog_layout)
                 val card = v.findViewById<CardView>(R.id.card)
-                val downloadLogo = v.findViewById<ImageView>(R.id.download_logo)
                 Log.i("data", "onClick: $position $message")
 //                Log.i("data", "onClick: $message")
                 val intent = Intent(context,
                     PicViewActivity::class.java)
                 val p1 = Pair.create(image as View?, "imageTransition")
-                val p2 = Pair.create(downloadBtn as View?, "btnTransition")
-                val p3 = Pair.create(card as View?, "cardTransition")
-                val p4 = Pair.create(downloadLogo as View?, "downloadLogoTransition")
+                val p2 = Pair.create(card as View?, "cardTransition")
                 val options = ActivityOptions
-                    .makeSceneTransitionAnimation(context as Activity, p1 ,p2,p3,p4)
+                    .makeSceneTransitionAnimation(context as Activity, p1,p2)
                 intent.putExtra("image_link","$message")
                 context.startActivity(intent, options.toBundle())
             }

@@ -39,6 +39,7 @@
                 android:layout_marginBottom="20dp"
                 android:transitionName="btnTransition"
                 android:layout_marginRight="20dp"
+                android:visibility="gone"
                 android:background="@drawable/download_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent">
