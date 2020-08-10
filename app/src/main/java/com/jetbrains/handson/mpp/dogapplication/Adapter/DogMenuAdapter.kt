@@ -60,10 +60,6 @@ class DogMenuAdapter(val context: Context?, private var receivedNameList: ArrayL
                         )
                     }
 
-//                    val info = "position : " + position.toString() + " Dog Name : " + name +" Image Link" + dogsImages[0].toString()
-//
-//                    Log.i("data", "onResponse: $info")
-
                     if (dogsImages.isEmpty()) {
                         Toast.makeText(context, "No Images Found!!!", Toast.LENGTH_SHORT).show()
                         Log.i("data", "onResponse: No Images Found!!!")

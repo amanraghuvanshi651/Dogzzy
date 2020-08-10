@@ -51,7 +51,6 @@ class DogsAdapter (val context:Context, private val dogsImages: ArrayList<DogsAp
                 val image = v.findViewById<ImageView>(R.id.dogImage_searched_layout)
                 val card = v.findViewById<CardView>(R.id.card)
                 Log.i("data", "onClick: $position $message")
-//                Log.i("data", "onClick: $message")
                 val intent = Intent(context,
                     PicViewActivity::class.java)
                 val p1 = Pair.create(image as View?, "imageTransition")

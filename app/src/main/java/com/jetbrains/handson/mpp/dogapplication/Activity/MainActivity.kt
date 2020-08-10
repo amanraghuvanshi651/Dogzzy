@@ -27,8 +27,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var arrayAdapter: ArrayAdapter<String>
     val nameList = ArrayList<String>()
     val displayList = ArrayList<String>()
-    val sortedNameList = ArrayList<String>()
-    val displyimageList = ArrayList<String>()
     private lateinit var head_tv: TextView
     private lateinit var sub_text: TextView
     private lateinit var search_text: EditText
@@ -113,53 +111,9 @@ class MainActivity : AppCompatActivity() {
                 i2: Int,
                 i3: Int
             ) {
-
-//                val notVisible = View.INVISIBLE
-//                val visible = View.VISIBLE
-//
-//
-//                val str = charSequence.toString()
-//                Log.i("editTextChange", "onTextChanged: ${str}")
-//                if (charSequence!!.isNotEmpty()) {
-//                    displayList.clear()
-//                    displyimageList.clear()
-//
-//                    val dogName = charSequence.toString()
-//
-//                    val search = dogName.toLowerCase()
-//                    nameList.forEach {
-//                        if (it.toLowerCase().contains(search)) {
-//                            displayList.add(it)
-//                            notFound.visibility = notVisible
-//                            Log.i("load", "onTextChanged: $it")
-//                        }
-//                    }
-//
-//                } else {
-//                    notFound.visibility = notVisible
-//                    displayList.clear()
-//                    displayList.addAll(nameList)
-//                    dogsRV.adapter?.notifyDataSetChanged()
-//                }
             }
 
             override fun afterTextChanged(edit: Editable) {
-//                if (edit.length != 0) {
-//                    // Business logic for search here
-//
-//                    val notVisible = View.INVISIBLE
-//                    val visible = View.VISIBLE
-//
-//
-//                    Log.i("load", "displayList: $displayList")
-//                    if (displayList.isEmpty()) {
-//                        notFound.visibility = visible
-//                        dogsRV.adapter?.notifyDataSetChanged()
-//                    } else {
-//                        notFound.visibility = notVisible
-//                        dogsRV.adapter?.notifyDataSetChanged()
-//                    }
-//                }
                 filter(edit.toString())
             }
         })
@@ -168,7 +122,6 @@ class MainActivity : AppCompatActivity() {
     private fun filter(text: String) {
         //new array list that will hold the filtered data
         displayList.clear()
-//        val filterdNames: ArrayList<String> = ArrayList()
 
         //looping through existing elements
         for (s in nameList) {
@@ -253,11 +206,11 @@ class MainActivity : AppCompatActivity() {
         displayList.addAll(nameList)
     }
 
-    fun View.hideKeyboard() {
-        val inputManager =
-            context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        inputManager.hideSoftInputFromWindow(windowToken, 0)
-    }
+//    fun View.hideKeyboard() {
+//        val inputManager =
+//            context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+//        inputManager.hideSoftInputFromWindow(windowToken, 0)
+//    }
 
     //OnBack pressed fun
     override fun onBackPressed() {

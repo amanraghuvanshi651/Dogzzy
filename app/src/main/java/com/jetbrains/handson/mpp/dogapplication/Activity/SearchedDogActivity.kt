@@ -51,16 +51,6 @@ class SearchedDogActivity : AppCompatActivity() {
 
         //default value to the recycler view
         dogsRV.adapter = DogsAdapter(this, imageList)
-
-//            //searchFilter
-//            arrayAdapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,d)
-//            dogNameText.setAdapter(arrayAdapter)
-
-//        this.supportActionBar!!.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
-//        supportActionBar!!.setDisplayShowCustomEnabled(true)
-//        supportActionBar!!.setCustomView(R.layout.coustom_action_bar)
-//        supportActionBar!!.elevation = 0f
-//        val view = supportActionBar!!.customView
     }
 
     private fun searchDog(name: String) {
